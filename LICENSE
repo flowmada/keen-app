@@ -1,0 +1,69 @@
+Keen End User License Agreement
+
+Copyright (c) 2026 Adam Wolf. All rights reserved.
+
+This is the license for Keen, the macOS application distributed through this
+repository's Releases page. Keen is not open source. No source code is provided
+here or elsewhere.
+
+By installing or using Keen, you agree to the following.
+
+
+1. YOU MAY USE IT, FREE OF CHARGE
+
+You may install and use Keen on any Mac you own or control, for personal or
+commercial purposes, at no cost. There is no license key, no account, and no
+usage limit.
+
+This license covers the version of Keen it was distributed with. Later versions
+may ship under different terms, including paid ones. Nothing here commits the
+author to releasing future versions free of charge.
+
+
+2. YOU MAY NOT REDISTRIBUTE IT
+
+You may not sell, rent, lease, sublicense, or otherwise distribute Keen or any
+copy of it. You may not host it for download elsewhere or bundle it with another
+product. Point people at this repository instead.
+
+
+3. YOU MAY NOT REVERSE ENGINEER IT
+
+You may not decompile, disassemble, or reverse engineer Keen, or attempt to
+derive its source code, except to the extent that applicable law expressly
+permits despite this limitation.
+
+
+4. NO WARRANTY
+
+KEEN IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+Keen estimates costs by multiplying token counts by published rates. Those
+estimates may be wrong, incomplete, or out of date, and they are not a bill, an
+invoice, or a statement of account. Do not rely on them for billing, accounting,
+tax, or any other financial purpose.
+
+
+5. NO LIABILITY
+
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
+OUT OF, OR IN CONNECTION WITH KEEN OR ITS USE.
+
+Some jurisdictions do not allow the exclusion of certain warranties or
+liabilities, so parts of sections 4 and 5 may not apply to you.
+
+
+6. TERMINATION
+
+This license ends if you breach it. On termination, stop using Keen and delete
+your copies.
+
+
+7. THIRD-PARTY COMPONENTS
+
+Keen includes open-source software licensed separately. See
+THIRD-PARTY-NOTICES.md. Nothing in this license limits your rights under those
+licenses.
