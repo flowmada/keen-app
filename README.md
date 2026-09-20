@@ -13,7 +13,8 @@
 Keen is a macOS menu bar app that shows what your AI coding work costs. It reads the
 transcript files that Claude Code, Conductor, Xcode, and Bitrig already write to your
 Mac, prices every turn against published rates, and puts a running total in your menu
-bar. It makes no network calls and sends nothing anywhere.
+bar. It sends nothing anywhere — the only thing it talks to is its own update feed,
+once a day.
 
 > [!IMPORTANT]
 > Keen prices your usage at published API rates. On a Max or Pro plan that number is the
@@ -122,12 +123,28 @@ Sonnet.
 
 Everything stays on your Mac.
 
-### The app makes no network calls
+### The only thing it sends is an update check
 
-Keen contains no networking code at all — no `URLSession`, no sockets, nothing that opens
-a connection. It has one third-party dependency,
-[GRDB.swift](https://github.com/groue/GRDB.swift), which is a SQLite wrapper. There is no
-analytics, no crash reporting, no update check, and no account.
+Keen makes exactly two kinds of network request, both of them about updating itself:
+
+- Once a day it fetches `https://flowmada.github.io/keen-app/appcast.xml` — a small
+  file listing the current version. The request carries nothing but the version of Keen
+  you're running, which is unavoidable in an HTTP request.
+- When you choose to install an update, it downloads that release's zip from this
+  repository's releases page.
+
+That's the whole list. **No transcript, session, project, branch or spend data ever
+leaves your Mac**, and Keen does not send a system profile — not your Mac model, not your
+macOS version, nothing about your hardware. There is no analytics, no crash reporting and
+no account.
+
+Updates are handled by [Sparkle](https://sparkle-project.org), the standard macOS update
+framework, over HTTPS. Every download must carry a valid signature from a key only the
+developer holds, or Keen refuses to install it.
+
+Keen's other third-party dependency is
+[GRDB.swift](https://github.com/groue/GRDB.swift), a SQLite wrapper, which makes no
+network requests of its own.
 
 ### What it opens
 
@@ -212,8 +229,14 @@ runs. It only happens once; after that it watches for new turns and updates as y
 
 ## Updating
 
-There is no auto-update yet. To hear about new versions, use **Watch → Custom →
-Releases** at the top of this page, and GitHub will notify you when one ships.
+Keen updates itself. It checks once a day, and when a new version is available it asks
+before downloading anything — nothing installs behind your back.
+
+You can also check whenever you like: right-click (or ⌃-click) the Keen icon in your menu
+bar and choose **Check for Updates…**.
+
+If you'd rather hear about releases another way, use **Watch → Custom → Releases** at the
+top of this page and GitHub will notify you when one ships.
 
 ## Feedback
 
