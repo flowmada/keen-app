@@ -1,8 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
-  <channel>
-    <title>Keen</title>
-    <description>Keen update feed. No releases published to this feed yet.</description>
-    <link>https://github.com/flowmada/keen-app</link>
-  </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Keen</title>
+        <description>Keen update feed.</description>
+        <link>https://github.com/flowmada/keen-app</link>
+        <item>
+            <title>1.1.0</title>
+            <pubDate>Mon, 21 Sep 2026 13:18:49 -0700</pubDate>
+            <sparkle:version>383</sparkle:version>
+            <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/flowmada/keen-app/releases/download/v1.1.0/Keen-1.1.0.zip" length="5113533" type="application/octet-stream" sparkle:edSignature="7BNnZzjeFsBekFCmBbsofQJVev+KzC9l5NzSM5ariSb2oLh+TqRoy8D4sYaayn7zb3OLn8H3/nXeVkBMkUHyDQ=="/>
+        </item>
+    </channel>
 </rss>
