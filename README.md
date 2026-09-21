@@ -13,7 +13,8 @@
 Keen is a macOS menu bar app that shows what your AI coding work costs. It reads the
 transcript files that Claude Code, Conductor, Xcode, and Bitrig already write to your
 Mac, prices every turn against published rates, and puts a running total in your menu
-bar. It makes no network calls and sends nothing anywhere.
+bar. It sends nothing anywhere — the only thing it talks to is its own update feed,
+once a day.
 
 > [!IMPORTANT]
 > Keen prices your usage at published API rates. On a Max or Pro plan that number is the
@@ -21,7 +22,7 @@ bar. It makes no network calls and sends nothing anywhere.
 > actually pay. [How the numbers work](#how-the-numbers-work) explains the rest.
 
 <p align="center">
-  <img src="docs/images/popover.png" width="760" alt="The Keen popover: today's total, the model mix bar, a list of sources down the left, and the selected source's branches on the right">
+  <img src="docs/images/popover.png" width="760" alt="The Keen popover: today's total, the model mix bar, a list of sources down the left, the selected source's branches on the right, and a footer with About Keen, the version, and Check for Updates">
 </p>
 
 <p align="center"><sub>Every screenshot on this page is rendered from the real interface with made-up
@@ -60,6 +61,14 @@ used each. The dimmed label is the one you didn't use.
 that had nothing today. *Not tracked* is a source Keen cannot read at all.
 
 <img src="docs/images/anatomy-source-rail.png" width="820" alt="Source rail states: arrow left for Anthropic only, right for Bedrock only, double arrow for both, blue fill when selected, No Spend for a tracked source with no activity, and Not tracked for a source Keen cannot read">
+
+### The footer
+
+The strip along the bottom holds the version you're running and two controls.
+**Check for Updates** on the right does the check immediately, and **About Keen** on the
+left opens a panel inside the popover — the version and copyright, a link to this page,
+a link to file an issue, the third-party notices, and the switch for whether Keen checks
+for updates on its own.
 
 ## What it reads
 
@@ -122,12 +131,29 @@ Sonnet.
 
 Everything stays on your Mac.
 
-### The app makes no network calls
+### The only thing it sends is an update check
 
-Keen contains no networking code at all — no `URLSession`, no sockets, nothing that opens
-a connection. It has one third-party dependency,
-[GRDB.swift](https://github.com/groue/GRDB.swift), which is a SQLite wrapper. There is no
-analytics, no crash reporting, no update check, and no account.
+Keen makes exactly two kinds of network request, both of them about updating itself:
+
+- Once a day it fetches `https://flowmada.github.io/keen-app/appcast.xml` — a small
+  file listing the current version. The request carries nothing but the version of Keen
+  you're running, which is unavoidable in an HTTP request. You can switch this off in
+  **About Keen**, in the popover's footer.
+- When you choose to install an update, it downloads that release's zip from this
+  repository's releases page.
+
+That's the whole list. **No transcript, session, project, branch or spend data ever
+leaves your Mac**, and Keen does not send a system profile — not your Mac model, not your
+macOS version, nothing about your hardware. There is no analytics, no crash reporting and
+no account.
+
+Updates are handled by [Sparkle](https://sparkle-project.org), the standard macOS update
+framework, over HTTPS. Every download must carry a valid signature from a key only the
+developer holds, or Keen refuses to install it.
+
+Keen's other third-party dependency is
+[GRDB.swift](https://github.com/groue/GRDB.swift), a SQLite wrapper, which makes no
+network requests of its own.
 
 ### What it opens
 
@@ -212,8 +238,19 @@ runs. It only happens once; after that it watches for new turns and updates as y
 
 ## Updating
 
-There is no auto-update yet. To hear about new versions, use **Watch → Custom →
-Releases** at the top of this page, and GitHub will notify you when one ships.
+Keen updates itself. It checks once a day, and when a new version is available it asks
+before downloading anything — nothing installs behind your back.
+
+You can also check whenever you like: open the popover and click **Check for Updates** in
+the footer, or right-click (or ⌃-click) the Keen icon in your menu bar and choose **Check
+for Updates…**.
+
+You can turn the daily check off. **About Keen** in the popover's footer has
+*Automatically check for updates*; uncheck it and Keen makes no network request at all
+until you ask it to.
+
+If you'd rather hear about releases another way, use **Watch → Custom → Releases** at the
+top of this page and GitHub will notify you when one ships.
 
 ## Feedback
 
