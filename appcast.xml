@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Keen</title>
+    <description>Keen update feed. No releases published to this feed yet.</description>
+    <link>https://github.com/flowmada/keen-app</link>
+  </channel>
+</rss>
