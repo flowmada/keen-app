@@ -12,7 +12,9 @@
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <description sparkle:format="markdown"><![CDATA[## Claude Opus 5.5 is priced
 
-Keen had no rate for Claude Opus 5.5, so it counted every Opus 5.5 turn as $0.00. 1.1.2 adds [Anthropic's published rates](https://platform.claude.com/docs/en/about-claude/pricing). The first time it opens, it prices the Opus 5.5 turns already recorded, so any day you used Opus 5.5 will show a higher total.
+Keen had no rate for Claude Opus 5.5, so it counted every Opus 5.5 turn as $0.00.
+
+Version 1.1.2 adds [Anthropic's published rates](https://platform.claude.com/docs/en/about-claude/pricing). The first time it opens, it prices the Opus 5.5 turns already recorded, so any day you used Opus 5.5 will show a higher total.
 
 Per million tokens:
 
