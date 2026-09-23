@@ -13,8 +13,8 @@
 Keen is a macOS menu bar app that shows what your AI coding work costs. It reads the
 transcript files that Claude Code, Conductor, Xcode, and Bitrig already write to your
 Mac, prices every turn against published rates, and puts a running total in your menu
-bar. It sends nothing anywhere — the only thing it talks to is its own update feed,
-once a day.
+bar. It sends nothing anywhere — the only things it talks to are its own update feed,
+once a day, and the download of an update you choose to install.
 
 > [!IMPORTANT]
 > Keen prices your usage at published API rates. On a Max or Pro plan that number is the
@@ -137,9 +137,9 @@ Everything stays on your Mac.
 Keen makes exactly two kinds of network request, both of them about updating itself:
 
 - Once a day it fetches `https://flowmada.github.io/keen-app/appcast.xml` — a small
-  file listing the current version. The request carries nothing but the version of Keen
-  you're running, which is unavoidable in an HTTP request. You can switch this off in
-  **About Keen**, in the popover's footer.
+  file listing the current version and what changed in it. The request carries nothing
+  but the version of Keen you're running, which is unavoidable in an HTTP request. You
+  can switch this off in **About Keen**, in the popover's footer.
 - When you choose to install an update, it downloads that release's zip from this
   repository's releases page.
 
@@ -195,10 +195,10 @@ recorded. The original transcripts belong to the tools that wrote them and are u
 
 Keen counts the tokens in each turn — input, output, cache writes, and cache reads,
 each at its own rate — and multiplies by the published price for that model. The rate
-card is a JSON file compiled into the app. It currently prices ten models across
-Anthropic and Amazon Bedrock: Fable 5 and 5.1, Opus 4.5 through 5, and Sonnet 4.5
+card is a JSON file compiled into the app. It currently prices eleven models across
+Anthropic and Amazon Bedrock: Fable 5 and 5.1, Opus 4.5 through 5.5, and Sonnet 4.5
 through 5. It also carries a rate for Haiku, which it prices but leaves out of the
-totals — see below.
+totals — see [Haiku is skipped on purpose](#haiku-is-skipped-on-purpose).
 
 The three-segment bar under the total shows the mix across Fable, Opus, and Sonnet, with
 each segment's width proportional to its share of spend. An unused tier holds its place
