@@ -98,9 +98,10 @@ Chats, not branches. One row per assistant chat, under the project it ran in.
 
 ### [Bitrig](https://bitrig.com)
 
-One section per project, with the work it did as the row.
+One section per project, one row per workspace, named for its branch. A house marks
+the project's main workspace; a tree marks each branch workspace.
 
-<img src="docs/images/detail-bitrig.png" width="720" alt="Bitrig rows grouped by project">
+<img src="docs/images/detail-bitrig.png" width="720" alt="Bitrig rows grouped by project: a house on the main workspace and a tree on each branch workspace, each showing its branch and spend">
 
 If Keen isn't picking up sessions you expect to see, please
 [open an issue](../../issues). That is useful to know.
