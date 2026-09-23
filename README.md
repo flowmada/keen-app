@@ -166,6 +166,7 @@ Keen scans these locations and nothing else:
 ~/Library/Developer/Xcode/CodingAssistant/ClaudeAgentConfig/projects
 ~/Library/Developer/Xcode/UserData/CodingAssistant
 ~/Library/Bitrig/Users/<id>/ClaudeConfig/projects
+~/Library/Bitrig/Users/<id>/Projects.json
 ~/Library/Application Support/Claude/local-agent-mode-sessions
 ```
 
