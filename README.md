@@ -13,8 +13,8 @@
 Keen is a macOS menu bar app that shows what your AI coding work costs. It reads the
 transcript files that Claude Code, Conductor, Xcode, and Bitrig already write to your
 Mac, prices every turn against published rates, and puts a running total in your menu
-bar. It sends nothing anywhere — the only thing it talks to is its own update feed,
-once a day.
+bar. It sends nothing anywhere — the only things it talks to are its own update feed,
+once a day, and the download of an update you choose to install.
 
 > [!IMPORTANT]
 > Keen prices your usage at published API rates. On a Max or Pro plan that number is the
@@ -198,7 +198,7 @@ each at its own rate — and multiplies by the published price for that model. T
 card is a JSON file compiled into the app. It currently prices eleven models across
 Anthropic and Amazon Bedrock: Fable 5 and 5.1, Opus 4.5 through 5.5, and Sonnet 4.5
 through 5. It also carries a rate for Haiku, which it prices but leaves out of the
-totals — see below.
+totals — see [Haiku is skipped on purpose](#haiku-is-skipped-on-purpose).
 
 The three-segment bar under the total shows the mix across Fable, Opus, and Sonnet, with
 each segment's width proportional to its share of spend. An unused tier holds its place
