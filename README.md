@@ -137,9 +137,9 @@ Everything stays on your Mac.
 Keen makes exactly two kinds of network request, both of them about updating itself:
 
 - Once a day it fetches `https://flowmada.github.io/keen-app/appcast.xml` — a small
-  file listing the current version. The request carries nothing but the version of Keen
-  you're running, which is unavoidable in an HTTP request. You can switch this off in
-  **About Keen**, in the popover's footer.
+  file listing the current version and what changed in it. The request carries nothing
+  but the version of Keen you're running, which is unavoidable in an HTTP request. You
+  can switch this off in **About Keen**, in the popover's footer.
 - When you choose to install an update, it downloads that release's zip from this
   repository's releases page.
 
@@ -195,8 +195,8 @@ recorded. The original transcripts belong to the tools that wrote them and are u
 
 Keen counts the tokens in each turn — input, output, cache writes, and cache reads,
 each at its own rate — and multiplies by the published price for that model. The rate
-card is a JSON file compiled into the app. It currently prices ten models across
-Anthropic and Amazon Bedrock: Fable 5 and 5.1, Opus 4.5 through 5, and Sonnet 4.5
+card is a JSON file compiled into the app. It currently prices eleven models across
+Anthropic and Amazon Bedrock: Fable 5 and 5.1, Opus 4.5 through 5.5, and Sonnet 4.5
 through 5. It also carries a rate for Haiku, which it prices but leaves out of the
 totals — see below.
 
