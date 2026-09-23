@@ -5,6 +5,24 @@
         <description>Keen update feed.</description>
         <link>https://github.com/flowmada/keen-app</link>
         <item>
+            <title>1.1.2</title>
+            <pubDate>Tue, 22 Sep 2026 23:29:55 -0700</pubDate>
+            <sparkle:version>397</sparkle:version>
+            <sparkle:shortVersionString>1.1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[## Claude Opus 5.5 is priced
+
+Keen had no rate for Claude Opus 5.5, so it counted every Opus 5.5 turn as $0.00. 1.1.2 adds [Anthropic's published rates](https://platform.claude.com/docs/en/about-claude/pricing). The first time it opens, it prices the Opus 5.5 turns already recorded, so any day you used Opus 5.5 will show a higher total.
+
+Per million tokens:
+
+- Input $4, output $20
+- Cache writes $5 (5-minute) and $8 (1-hour), cache reads $0.20
+- Through Amazon Bedrock, 10% more: Keen uses Bedrock's regional rates
+]]></description>
+            <enclosure url="https://github.com/flowmada/keen-app/releases/download/v1.1.2/Keen-1.1.2.zip" length="5117619" type="application/octet-stream" sparkle:edSignature="+ZohHSU6CLcBPs78KyBzAUoFnQVJpfUOVfIve6MaaTCoFzNNOPM1qbGvijoGketdZSA8ae3XiwPLETPK575yBA=="/>
+        </item>
+        <item>
             <title>1.1.1</title>
             <pubDate>Tue, 22 Sep 2026 19:41:25 -0700</pubDate>
             <sparkle:version>388</sparkle:version>
