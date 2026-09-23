@@ -156,23 +156,6 @@ Keen's other third-party dependency is
 [GRDB.swift](https://github.com/groue/GRDB.swift), a SQLite wrapper, which makes no
 network requests of its own.
 
-### What it opens
-
-Keen scans these locations and nothing else:
-
-```
-~/.claude/projects                                               and any ~/.claude-*/projects sibling
-~/Library/Application Support/com.conductor.app/conductor.db
-~/Library/Developer/Xcode/CodingAssistant/ClaudeAgentConfig/projects
-~/Library/Developer/Xcode/UserData/CodingAssistant
-~/Library/Bitrig/Users/<id>/ClaudeConfig/projects
-~/Library/Bitrig/Users/<id>/Projects.json
-~/Library/Application Support/Claude/local-agent-mode-sessions
-```
-
-The `~/.claude-*` siblings are how Keen finds work run under a separate
-`CLAUDE_CONFIG_DIR`, including Bedrock.
-
 ### What it stores
 
 Keen keeps one SQLite database at
